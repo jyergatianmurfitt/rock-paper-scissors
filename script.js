@@ -35,7 +35,7 @@ const play = playerChoice => {
         rockComp.style.transform = 'scale(2)';
       } else if (computerChoice === 'paper') {
         paperComp.style.transform = 'scale(2)';
-      } else if (computerChoice === 'paper') {
+      } else if (computerChoice === 'scissors') {
         scissorsComp.style.transform = 'scale(2)';
       }
       textResult.textContent = 'Draw! Play again';
