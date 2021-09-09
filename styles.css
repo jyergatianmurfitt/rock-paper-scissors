@@ -1,0 +1,25 @@
+.title {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.options {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 10%;
+}
+
+span {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: aliceblue;
+  border: solid 2px darkblue;
+  cursor: pointer;
+}
+
+h4 {
+  margin-top: 40%;
+}
