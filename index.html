@@ -9,9 +9,13 @@
   <body>
     <h1 class="title">Rock-Paper-Scissors</h1>
     <div class="options">
-      <span onclick="play('rock');"><h4>Rock</h4></span>
-      <span onclick="play('paper');"><h4>Paper</h4></span>
-      <span onclick="play('scissors');"><h4>Scissors</h4></span>
+      <div class="row row1">
+        <span class="rockObj" onclick="play('rock');"><img class="rock" src='images/rock.png'></span>
+      </div>
+      <div class="row row2">
+        <span class="paperObj" onclick="play('paper');"><img class="paper" src='images/paper.png'></span>
+        <span class="scissorsObj" onclick="play('scissors');"><img class="scissors" src='images/scissors.png'></span>
+      </div>
     </div>
   <script src="script.js" charset="utf-8"></script>
   </body>

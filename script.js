@@ -11,7 +11,7 @@ const play = playerChoice => {
 
   //Check Choices//
   if (playerChoice === computerChoice) {
-      console.log('Draw! Play again.')
+      alert('Draw! Play again.')
     } else if (playerChoice === 'rock' ) {
       if (computerChoice === 'scissors') {
         alert('You won! Rock crushes scissors');
