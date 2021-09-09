@@ -16,7 +16,8 @@ body {
 
 .score {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  margin-top: 3%;
 }
 
 .scoreBoard {
@@ -26,7 +27,36 @@ body {
   text-transform: uppercase;
   letter-spacing: 6px;
   padding: 1%;
-  margin-right: 5%;
+  padding-bottom: 2%;
+  font-weight: bold;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.player {
+  justify-content: flex-start;
+}
+
+.computer {
+  justify-content: flex-end;
+}
+
+.subheading, .textResult {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.textResult {
+  width: 30%;
+  font-size: 32px;
+  margin-top: 5%;
+  font-weight: bolder;
 }
 
 .row {
@@ -34,7 +64,7 @@ body {
   justify-content: center;
 }
 
-.paperObj, .scissorsObj {
+.paperObj, .scissorsObj, .paperComp, .scissorsComp {
   margin: 0 10px;
 }
 
@@ -51,8 +81,8 @@ span {
   transition: all 150ms ease-in-out;
 }
 
-span:hover {
-  transform: scale(1.5);
+.rockObj:hover, .paperObj:hover, .scissorsObj:hover {
+  transform: scale(2);
 }
 
 .rock, .paper, .scissors {

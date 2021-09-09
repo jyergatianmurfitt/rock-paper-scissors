@@ -15,13 +15,31 @@
         <div class="computerScore"></div>
       </div>
     </div>
-    <div class="options">
-      <div class="row row1">
-        <span onclick='play("rock");' class="rockObj"><img name='rock' class="option rock" src='images/rock.png'></span>
+    <div class="controls">
+      <div class="payer">
+        <h2 class="subheading">You</h2>
+        <div class="options">
+          <div class="row row1">
+            <span onclick='play("rock");' class="rockObj"><img name='rock' class="option rock" src='images/rock.png'></span>
+          </div>
+          <div class="row row2">
+            <span onclick='play("paper");' class="paperObj"><img name='paper' class="option paper" src='images/paper.png'></span>
+            <span onclick='play("scissors");' class="scissorsObj"><img name='scissors' class="option scissors" src='images/scissors.png'></span>
+          </div>
+        </div>
       </div>
-      <div class="row row2">
-        <span onclick='play("paper");' class="paperObj"><img name='paper' class="option paper" src='images/paper.png'></span>
-        <span onclick='play("scissors");' class="scissorsObj"><img name='scissors' class="option scissors" src='images/scissors.png'></span>
+      <div class="textResult"></div>
+      <div class="computer">
+        <h2 class="subheading">Computer</h2>
+        <div class="options">
+          <div class="row row1">
+            <span class="rockComp"><img class="rock" src='images/rock.png'></span>
+          </div>
+          <div class="row row2">
+            <span class="paperComp"><img class="paper" src='images/paper.png'></span>
+            <span class="scissorsComp"><img class="scissors" src='images/scissors.png'></span>
+          </div>
+        </div>
       </div>
     </div>
   <script src="script.js" charset="utf-8"></script>
