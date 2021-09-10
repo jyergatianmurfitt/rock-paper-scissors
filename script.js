@@ -29,6 +29,25 @@ const play = playerChoice => {
   const randomChoice = getRandomInt(3);
   const computerChoice = choiceArr[randomChoice];
 
+  //Responsive Result Message
+  const overlay = document.querySelector('.overlay');
+
+  const callResult = message => {
+    if (window.innerWidth > 680) {
+      textResult.textContent = message;
+    } else {
+      overlay.style.display = 'block';
+      textResult.textContent = message;
+      textResult.classList.add('mobile');
+      textResult.style.display = 'block';
+      setTimeout(function(){
+        overlay.style.display = 'none';
+        textResult.classList.remove('mobile');
+        textResult.style.display = 'none';
+      }, 1500);
+    }
+  }
+
   //Check Choices//
   if (playerChoice === computerChoice) {
       if (computerChoice === 'rock') {
@@ -38,35 +57,35 @@ const play = playerChoice => {
       } else if (computerChoice === 'scissors') {
         scissorsComp.style.transform = 'scale(2)';
       }
-      textResult.textContent = 'Draw! Play again';
+        callResult('Draw! Play again');
     } else if (playerChoice === 'rock' ) {
       if (computerChoice === 'scissors') {
         scissorsComp.style.transform = 'scale(2)';
-        textResult.textContent = 'You won! Rock crushes scissors';
+        callResult('You won! Rock crushes scissors');
         playerScore++;
       } else if (computerChoice === 'paper') {
         paperComp.style.transform = 'scale(2)';
-        textResult.textContent = 'You lose! Paper covers rock';
+        callResult('You lose! Paper covers rock');
         computerScore++;
       }
     } else if (playerChoice === 'paper') {
       if (computerChoice === 'rock') {
         rockComp.style.transform = 'scale(2)';
-        textResult.textContent = 'You won! Paper covers rock';
+        callResult('You won! Paper covers rock');
         playerScore++;
       } else if (computerChoice === 'scissors') {
         scissorsComp.style.transform = 'scale(2)';
-        textResult.textContent = 'You lose! Scissors cut paper';
+        callResult('You lose! Scissors cut paper');
         computerScore++;
       }
     } else if (playerChoice === 'scissors') {
       if (computerChoice === 'rock') {
         rockComp.style.transform = 'scale(2)';
-        textResult.textContent = 'You lose! Rock crushes scissors';
+        callResult('You lose! Rock crushes scissors');
         computerScore++;
       } else if (computerChoice === 'paper') {
         paperComp.style.transform = 'scale(2)';
-        textResult.textContent = 'You won! Scissors cut paper';
+        callResult('You won! Scissors cut paper');
         playerScore++;
       }
     }

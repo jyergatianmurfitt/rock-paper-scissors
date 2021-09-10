@@ -4,6 +4,17 @@ body {
   font-family: monospace;
 }
 
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  z-index: 1;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+}
+
 .title {
   display: block;
   margin: auto;
@@ -21,7 +32,7 @@ body {
 }
 
 .scoreBoard {
-  background: rgba(255, 255, 255, 0.7);;
+  background: rgba(255, 255, 255, 0.7);
   width: 20%;
   text-align: center;
   text-transform: uppercase;
@@ -59,6 +70,14 @@ body {
   font-weight: bolder;
 }
 
+.textResult.mobile {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  font-size: 40px;
+  z-index: 2;
+}
+
 .row {
   display: flex;
   justify-content: center;
@@ -94,4 +113,15 @@ span {
 
 .paper {
   width: 65px;
+}
+
+@media only screen and (max-width: 680px) {
+  .scoreBoard {
+    width: 40%;
+  }
+
+  .controls {
+    display: block;
+    margin: auto;
+  }
 }
