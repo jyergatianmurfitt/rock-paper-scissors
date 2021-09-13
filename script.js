@@ -45,6 +45,11 @@ const play = playerChoice => {
         textResult.classList.remove('mobile');
         textResult.style.display = 'none';
       }, 1500);
+      setTimeout(function(){
+        rockComp.style.transform = 'scale(1)';
+        paperComp.style.transform = 'scale(1)';
+        scissorsComp.style.transform = 'scale(1)';
+      }, 1500);
     }
   }
 
