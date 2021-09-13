@@ -9,8 +9,24 @@ playerScoreBoard.textContent = 'Player: ' + playerScore;
 computerScoreBoard.textContent = 'Computer: ' + computerScore;
 
 
+//Click-effect on mobile//
+const obj = document.querySelectorAll('.obj');
 
-const play = playerChoice => {
+obj.forEach((object, i) => {
+  object.addEventListener('click', e = () => {
+    if(window.innerWidth < 680) {
+      object.style.transform = 'scale(2)';
+      setTimeout(function(){
+        object.style.transform = 'scale(1)';
+      }, 1500);
+    }
+  });
+});
+
+
+//Main game function
+const play = (playerChoice) => {
+
   //Reset Computer controls//
   const rockComp = document.querySelector('.rockComp');
   const paperComp = document.querySelector('.paperComp');
@@ -20,6 +36,7 @@ const play = playerChoice => {
   rockComp.style.transform = 'scale(1)';
   paperComp.style.transform = 'scale(1)';
   scissorsComp.style.transform = 'scale(1)';
+
 
   //Computer's choice//
   const getRandomInt = max => {
@@ -36,10 +53,12 @@ const play = playerChoice => {
     if (window.innerWidth > 680) {
       textResult.textContent = message;
     } else {
-      overlay.style.display = 'block';
-      textResult.textContent = message;
-      textResult.classList.add('mobile');
-      textResult.style.display = 'block';
+      setTimeout(function(){
+        overlay.style.display = 'block';
+        textResult.textContent = message;
+        textResult.classList.add('mobile');
+        textResult.style.display = 'block';
+      }, 500);
       setTimeout(function(){
         overlay.style.display = 'none';
         textResult.classList.remove('mobile');

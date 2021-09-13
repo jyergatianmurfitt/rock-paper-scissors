@@ -124,4 +124,8 @@ span {
     display: block;
     margin: auto;
   }
+
+  .rockObj:hover, .paperObj:hover, .scissorsObj:hover {
+    transform: scale(1);
+  }
 }
