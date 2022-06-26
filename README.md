@@ -1,17 +1,11 @@
 # Memory Game
 This is a basic rock-paper-scissors game built with JavaScript. Play against the computer and see who wins.
 
-## Motivation
-The purpose of building this app was to expand my JavaScript experience into acconting for potential outcomes in a game environment.
-
 ## Tech/framework used
 <b>Built with</b>
 - [HTML]
 - [CSS]
 - [JS]
-
-## Installation
-To install this project simply click the green 'Code' button and download the ZIP file. Save the file to your desired directory and edit the contents in your favourite text editor.
 
 ## Contribute
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
